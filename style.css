@@ -1,0 +1,176 @@
+/* Define as cores e a fonte do corpo da página */
+body {
+    background-image: url(BackgroundImg.jpg);
+    background-size: cover;
+    background-color: #0F4C5C;
+    color: #FFFFFF;
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estiliza o cabeçalho */
+header {
+    background-image: linear-gradient(to top, rgba(255,0,0,0), #0F4C5C);
+    color: #FFFFFF;
+    padding: 20px;
+    text-align: left;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: left;
+    
+}
+
+/* Define como a navegação deve ser exibida no cabeçalho */
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Define como cada item de navegação deve ser exibido no cabeçalho */
+header nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+/* Define como o link de navegação deve ser estilizado no cabeçalho */
+header nav li a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+/* Define como o link de navegação deve se comportar quando o mouse passar sobre ele */
+header nav li a:hover {
+    color: #F9C74F;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+/* Reduza o tamanho das fontes em dispositivos menores */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+/* Defina regras de estilo diferentes para dispositivos menores */
+@media screen and (max-width: 768px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Redimensione as imagens para dispositivos menores */
+@media screen and (max-width: 768px) {
+    #mapdiv img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+#mensagem {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+    background-color: #F9C74F;
+    color: #0F4C5C;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+    width: 40%;
+    max-width: calc(50% - 60px);
+    text-align: left;
+  }
+
+/* Define como o mapa interativo deve ser*/
+#mapdiv {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 50%;
+    margin: 0 auto;
+    position: fixed;
+    left: 20px;
+    top: 250px;
+    float: left; /* adiciona o float para que a div info-uf-interna apareça à direita */
+}
+
+#mapdiv a :hover {
+    fill:#F9C74F;
+    cursor: pointer;
+}
+
+.info-uf {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 50%;
+    margin: 0 auto;
+    position: fixed;
+    right: 20px; /* adiciona o position para alinhar a div info-uf-interna à direita */
+}
+
+.info-uf-interna {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #F9C74F;
+    color: #0F4C5C;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+    max-width: calc(50% - 60px); /* usa calc() para definir a largura da div info-uf-interna */
+    text-align: center;
+}
+
+.mapdiv, .info-uf {
+    margin-top: 100px;
+}
+
+#malha {
+    width: 30%;
+    margin-left: 20px;
+}
+
+/* Estiliza os títulos h1 */
+h1 {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 20px;
+    font-size: 28px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #F9C74F;
+}
+
+/* Estiliza as listas suspensas */
+select {
+    background-color: #FFFFFF;
+    color: #222222;
+    border: none;}
+
+ area:hover {
+      opacity: 0.7;
+     cursor: pointer;
+}
+
+footer{
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
